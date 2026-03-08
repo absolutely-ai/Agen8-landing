@@ -1,0 +1,380 @@
+/* EarlyAccess.css */
+
+.early-access-section {
+    padding: 200px 0;
+    position: relative;
+    /* Warm Orange Gradient Background - Centered at bottom */
+    background: radial-gradient(ellipse 120% 80% at 50% 100%, #FF9A62 0%, #FF5500 40%, #FFE8D9 80%, #FFF8F5 100%);
+    /* Or use a more complex one if needed to match image exactly, but this is a good start */
+    overflow: hidden;
+}
+
+/* Background Grid Overlay (Optional but adds texture) */
+.early-access-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.early-access-card {
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    /* Allow icons to float slightly out or feel expansive */
+}
+
+/* Icon Cloud Wrapper */
+.icon-cloud-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Behind content */
+    pointer-events: none;
+    /* Let clicks pass through to form */
+    overflow: hidden;
+    border-radius: 40px;
+    /* Clip to card */
+}
+
+/* Base Icon Style */
+.cloud-icon-item {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float-infinite 6s ease-in-out infinite;
+}
+
+.cloud-icon-item .icon-inner {
+    width: 60%;
+    height: 60%;
+}
+
+.cloud-icon-item svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Infinite Floating Animation */
+@keyframes float-infinite {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
+}
+
+/* 
+   Scattering the specific items effectively.
+   Since we don't know exact count, we use nth-child to create a pseudo-random distribution.
+   Targeting ~15-20 icons. 
+   We want them generally around the center text but not blocking it too much, 
+   or just floating everywhere as a background cloud.
+*/
+
+/* Top Left Cluster */
+.cloud-icon-item:nth-child(1) {
+    top: 15%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+}
+
+.cloud-icon-item:nth-child(2) {
+    top: 25%;
+    left: 18%;
+    width: 70px;
+    height: 70px;
+    animation-delay: -1s;
+    z-index: 2;
+}
+
+.cloud-icon-item:nth-child(3) {
+    top: 10%;
+    left: 25%;
+    width: 40px;
+    height: 40px;
+    animation-delay: -2s;
+    opacity: 0.8;
+}
+
+/* Top Right Cluster */
+.cloud-icon-item:nth-child(4) {
+    top: 18%;
+    right: 15%;
+    width: 60px;
+    height: 60px;
+    animation-delay: -1.5s;
+    z-index: 2;
+}
+
+.cloud-icon-item:nth-child(5) {
+    top: 28%;
+    right: 8%;
+    width: 45px;
+    height: 45px;
+    animation-delay: -3s;
+}
+
+.cloud-icon-item:nth-child(6) {
+    top: 8%;
+    right: 25%;
+    width: 55px;
+    height: 55px;
+    animation-delay: -0.5s;
+    opacity: 0.9;
+}
+
+/* Bottom Left Cluster */
+.cloud-icon-item:nth-child(7) {
+    bottom: 15%;
+    left: 12%;
+    width: 60px;
+    height: 60px;
+    animation-delay: -2s;
+}
+
+.cloud-icon-item:nth-child(8) {
+    bottom: 25%;
+    left: 22%;
+    width: 45px;
+    height: 45px;
+    animation-delay: -4s;
+    opacity: 0.7;
+}
+
+.cloud-icon-item:nth-child(9) {
+    bottom: 8%;
+    left: 30%;
+    width: 55px;
+    height: 55px;
+    animation-delay: -1s;
+}
+
+/* Bottom Right Cluster */
+.cloud-icon-item:nth-child(10) {
+    bottom: 20%;
+    right: 12%;
+    width: 70px;
+    height: 70px;
+    animation-delay: -2.5s;
+    z-index: 2;
+}
+
+.cloud-icon-item:nth-child(11) {
+    bottom: 10%;
+    right: 22%;
+    width: 50px;
+    height: 50px;
+    animation-delay: -0.8s;
+}
+
+.cloud-icon-item:nth-child(12) {
+    bottom: 30%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    animation-delay: -3.5s;
+    opacity: 0.6;
+}
+
+/* Middle Handlers (Floating near text but safe) */
+.cloud-icon-item:nth-child(13) {
+    top: 40%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+.cloud-icon-item:nth-child(14) {
+    top: 45%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+.cloud-icon-item:nth-child(15) {
+    top: 15%;
+    left: 45%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.4;
+}
+
+/* Hide remaining if any */
+.cloud-icon-item:nth-child(n+16) {
+    display: none;
+}
+
+
+/* Content Layout */
+.early-access-content {
+    position: relative;
+    z-index: 10;
+    /* Above icons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ea-title {
+    font-size: 4rem;
+    color: #1a1a1a;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.1;
+}
+
+.ea-title .serif-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #FF5500;
+    /* Subtle highlight to link branding */
+}
+
+.ea-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.ea-footer-text {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Form Styles (Refined) */
+.ea-form-wrapper {
+    height: 60px;
+    /* Prevent layout shift */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ea-trigger-btn {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    background: #FF5500;
+    /* Brand Orange */
+    border: none;
+    box-shadow: 0 10px 25px rgba(255, 85, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ea-trigger-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(255, 85, 0, 0.4);
+    background: #FF4400;
+}
+
+.ea-form {
+    background: white;
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.ea-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 40px;
+    color: #333;
+}
+
+.ea-submit-btn {
+    padding: 12px 28px;
+    border-radius: 40px;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ea-submit-btn:hover {
+    background: #000;
+}
+
+.ea-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+@media (max-width: 768px) {
+    .ea-title {
+        font-size: 2.5rem;
+    }
+
+    .early-access-card {
+        padding: 60px 20px;
+        margin: 0 20px;
+        border-radius: 30px;
+    }
+
+    .cloud-icon-item {
+        transform: scale(0.7) !important;
+        /* Shrink icons on mobile */
+    }
+
+    /* Adjust scatter for mobile if needed, or just let them be */
+    .icon-cloud-wrapper {
+        opacity: 0.6;
+        /* Fade icons on mobile to ensure text readability */
+    }
+}
