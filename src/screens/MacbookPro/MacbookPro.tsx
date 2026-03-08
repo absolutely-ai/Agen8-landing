@@ -230,7 +230,7 @@ export const MacbookPro = (): React.JSX.Element => {
               />
             </CardContent>
           </Card>
-          
+
           {/* Send Button with Eclipse */}
           <button
             onClick={() => setIsWaitlistOpen(true)}
@@ -270,59 +270,57 @@ export const MacbookPro = (): React.JSX.Element => {
 
       {/* Why agen8? Section */}
       <section className="lg:absolute relative top-0 lg:top-[900px] left-0 lg:left-[calc(50.00%_-_657px)] w-full lg:w-[1315px] min-h-[500px] lg:h-[715px] px-4 lg:px-0 mx-0 lg:mx-auto mt-12 lg:mt-0 flex items-center justify-center">
-        <div className="w-full max-w-[calc(100%-32px)] lg:max-w-none lg:w-full bg-white rounded-[20px] shadow-[0px_4px_12px_#00000040] flex flex-col items-center pb-8 lg:pb-0">
-        <h2 className="mt-6 lg:mt-[52px] px-4 lg:px-0 [font-family:'Libre_Baskerville',Helvetica] font-normal text-black text-[28px] lg:text-[40px] text-center tracking-[0] leading-[normal]">
-          <span className="tracking-[-1.3px] lg:tracking-[-1.87px]">Why agen</span>
-          <span className="italic text-[#ff5500] tracking-[0]">8</span>
-          <span className="tracking-[-1.3px] lg:tracking-[-1.87px]"> ?</span>
-        </h2>
+        <div className="w-full max-w-[calc(100%-32px)] lg:max-w-none lg:w-full bg-white rounded-[20px] shadow-[0px_4px_12px_#00000040] flex flex-col items-center pb-12 lg:pb-10">
+          <h2 className="mt-6 lg:mt-[52px] px-4 lg:px-0 [font-family:'Libre_Baskerville',Helvetica] font-normal text-black text-[28px] lg:text-[40px] text-center tracking-[0] leading-[normal]">
+            <span className="tracking-[-1.3px] lg:tracking-[-1.87px]">Why agen</span>
+            <span className="italic text-[#ff5500] tracking-[0]">8</span>
+            <span className="tracking-[-1.3px] lg:tracking-[-1.87px]"> ?</span>
+          </h2>
 
-        <p className="mt-4 lg:mt-6 px-4 lg:px-0 [font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-sm lg:text-base text-center tracking-[0] leading-[normal]">
-          Single Prompt • Node Formation • Complex Workflows
-        </p>
+          <p className="mt-4 lg:mt-6 px-4 lg:px-0 [font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-sm lg:text-base text-center tracking-[0] leading-[normal]">
+            Single Prompt • Node Formation • Complex Workflows
+          </p>
 
-        {/* Video section with border and label */}
-        <div className="mt-6 lg:mt-8 relative px-4 lg:px-0 w-full lg:w-auto flex justify-center">
-          <div className="relative w-full max-w-[641px]">
-            {/* "Hear it directly from the founder" label box */}
-            <div className="absolute -top-[12px] lg:-top-[15px] left-1/2 transform -translate-x-1/2 z-10 w-[220px] lg:w-[262px] h-[48px] lg:h-[59px] bg-[#ffe0c5] rounded-[8px] lg:rounded-[12px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex items-center justify-center gap-2 px-3 lg:px-4">
-              <img
-                className="w-5 h-5 lg:w-6 lg:h-6"
-                alt="Video"
-                src="/resources/majesticons_video.svg"
-              />
-              <p className="[font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-xs lg:text-sm tracking-[0] leading-[normal] whitespace-nowrap">
-                Hear it directly from the founder
-              </p>
-            </div>
+          {/* Video section with border and label */}
+          <div className="mt-6 lg:mt-8 relative px-4 lg:px-0 w-full lg:w-auto flex justify-center">
+            <div className="relative w-full max-w-[641px]">
+              {/* "Hear it directly from the founder" label box */}
+              <div className="absolute -top-[12px] lg:-top-[15px] left-1/2 transform -translate-x-1/2 z-10 w-[220px] lg:w-[262px] h-[48px] lg:h-[59px] bg-[#ffe0c5] rounded-[8px] lg:rounded-[12px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex items-center justify-center gap-2 px-3 lg:px-4">
+                <img
+                  className="w-5 h-5 lg:w-6 lg:h-6"
+                  alt="Video"
+                  src="/resources/majesticons_video.svg"
+                />
+                <p className="[font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-xs lg:text-sm tracking-[0] leading-[normal] whitespace-nowrap">
+                  Hear it directly from the founder
+                </p>
+              </div>
 
-            {/* Video box with border */}
-            <div className="w-full aspect-video lg:w-[641px] lg:h-[367px] rounded-[8px] lg:rounded-[12px] border-[8px] lg:border-[12px] border-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] overflow-hidden">
-              {/* Video Placeholder */}
-              <div className="w-full h-full bg-[#949494] rounded-[4px] lg:rounded-[8px] flex items-center justify-center relative group cursor-pointer hover:bg-[#858585] transition-colors">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 lg:w-10 lg:h-10 text-[#949494] ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                </div>
+              {/* Video box with border */}
+              <div className="w-full aspect-video lg:w-[641px] lg:h-[367px] rounded-[8px] lg:rounded-[12px] border-[8px] lg:border-[12px] border-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] overflow-hidden bg-black">
+                {/* YouTube Video Embed */}
+                <iframe
+                  className="w-full h-full border-none"
+                  src="https://www.youtube-nocookie.com/embed/A30beHR5_no"
+                  title="Agen8 Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
-        </div>
 
-        <Button
-          asChild
-          className="mt-6 lg:mt-8 h-[48px] lg:h-[53px] px-6 lg:px-8 bg-[#fb6d26] rounded-xl shadow-[0px_2px_4px_#00000040] hover:bg-[#ff7d36] hover:scale-105 transition-all duration-300 flex items-center gap-2 lg:gap-3"
-        >
-          <a href="https://calendly.com/sangwavishvendra/agen8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:gap-3">
-            <span className="[font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-sm lg:text-base whitespace-nowrap">
-              Start building
-            </span>
-            <img src="/resources/Arrow right.svg" alt="arrow" className="w-4 h-4 lg:w-5 lg:h-5" />
-          </a>
-        </Button>
+          <Button
+            asChild
+            className="mt-6 lg:mt-8 h-[48px] lg:h-[53px] px-6 lg:px-8 bg-[#fb6d26] rounded-xl shadow-[0px_2px_4px_#00000040] hover:bg-[#ff7d36] hover:scale-105 transition-all duration-300 flex items-center gap-2 lg:gap-3"
+          >
+            <a href="https://calendly.com/sangwavishvendra/agen8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 lg:gap-3">
+              <span className="[font-family:'Microsoft_Sans_Serif-Regular',Helvetica] font-normal text-black text-sm lg:text-base whitespace-nowrap">
+                Start building
+              </span>
+              <img src="/resources/Arrow right.svg" alt="arrow" className="w-4 h-4 lg:w-5 lg:h-5" />
+            </a>
+          </Button>
         </div>
       </section>
 
@@ -548,7 +546,7 @@ export const MacbookPro = (): React.JSX.Element => {
             >
               ×
             </button>
-            
+
             {submitStatus === "success" ? (
               // Success State
               <div className="text-center py-6 lg:py-8">
@@ -573,11 +571,11 @@ export const MacbookPro = (): React.JSX.Element => {
                 <h2 className="text-xl lg:text-2xl font-bold text-black mb-2 [font-family:'Libre_Baskerville',Helvetica]">
                   Join the <span className="italic text-[#ff5500]">agen8</span> waitlist
                 </h2>
-                
+
                 <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 [font-family:'Microsoft_Sans_Serif-Regular',Helvetica]">
                   Be the first to know when we launch. Get early access and exclusive updates.
                 </p>
-                
+
                 <form onSubmit={handleWaitlistSubmit} className="space-y-4">
                   <div>
                     <input
@@ -591,20 +589,19 @@ export const MacbookPro = (): React.JSX.Element => {
                       placeholder="Enter your email address"
                       required
                       disabled={isLoading}
-                      className={`w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-colors [font-family:'Microsoft_Sans_Serif-Regular',Helvetica] ${
-                        submitStatus === "error"
+                      className={`w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-colors [font-family:'Microsoft_Sans_Serif-Regular',Helvetica] ${submitStatus === "error"
                           ? "border-red-500 focus:border-red-600"
                           : "border-gray-200 focus:border-[#ff5500]"
-                      } disabled:opacity-50 disabled:cursor-not-allowed`}
+                        } disabled:opacity-50 disabled:cursor-not-allowed`}
                     />
-                    
+
                     {submitStatus === "error" && errorMessage && (
                       <p className="mt-2 text-sm text-red-600 [font-family:'Microsoft_Sans_Serif-Regular',Helvetica]">
                         {errorMessage}
                       </p>
                     )}
                   </div>
-                  
+
                   <Button
                     type="submit"
                     disabled={isLoading}
