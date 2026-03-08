@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
 import './EarlyAccess.css';
 
 // SVG Icons from Integration (duplicated for self-containment/isolation as requested)
