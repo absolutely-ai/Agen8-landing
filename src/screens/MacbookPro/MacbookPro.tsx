@@ -26,6 +26,8 @@ export const MacbookPro = (): React.JSX.Element => {
   const [errorMessage, setErrorMessage] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [currentExampleIndex, setCurrentExampleIndex] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const VIDEO_ID = "A30beHR5_no";
 
   // Rotating example texts
   const exampleTexts = [
@@ -298,14 +300,36 @@ export const MacbookPro = (): React.JSX.Element => {
 
               {/* Video box with border */}
               <div className="w-full aspect-video lg:w-[641px] lg:h-[367px] rounded-[8px] lg:rounded-[12px] border-[8px] lg:border-[12px] border-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] overflow-hidden bg-black">
-                {/* YouTube Video Embed */}
-                <iframe
-                  className="w-full h-full border-none"
-                  src="https://www.youtube-nocookie.com/embed/A30beHR5_no"
-                  title="Agen8 Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                {isVideoPlaying ? (
+                  // Iframe only mounts after click — no black screen on load
+                  <iframe
+                    className="w-full h-full border-none"
+                    src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                    title="Agen8 Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  // Thumbnail loads instantly — zero black screen
+                  <div
+                    className="w-full h-full relative cursor-pointer group"
+                    onClick={() => setIsVideoPlaying(true)}
+                  >
+                    <img
+                      src={`https://img.youtube.com/vi/${VIDEO_ID}/hqdefault.jpg`}
+                      alt="Watch Agen8 demo"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-white transition-all shadow-lg">
+                        <svg className="w-8 h-8 lg:w-10 lg:h-10 text-[#fb6d26] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -590,8 +614,8 @@ export const MacbookPro = (): React.JSX.Element => {
                       required
                       disabled={isLoading}
                       className={`w-full px-4 py-3 border-2 rounded-xl focus:outline-none transition-colors [font-family:'Microsoft_Sans_Serif-Regular',Helvetica] ${submitStatus === "error"
-                          ? "border-red-500 focus:border-red-600"
-                          : "border-gray-200 focus:border-[#ff5500]"
+                        ? "border-red-500 focus:border-red-600"
+                        : "border-gray-200 focus:border-[#ff5500]"
                         } disabled:opacity-50 disabled:cursor-not-allowed`}
                     />
 
