@@ -3,14 +3,17 @@ const socialLinks = [
   {
     icon: "https://c.animaapp.com/mk3i7h91OjH2GA/img/line-md-instagram.svg",
     alt: "Instagram",
+    p:"https://www.instagram.com/agen8.io/",
   },
   {
     icon: "https://c.animaapp.com/mk3i7h91OjH2GA/img/prime-twitter.svg",
     alt: "Twitter",
+    p:"#",
   },
   {
     icon: "https://c.animaapp.com/mk3i7h91OjH2GA/img/mdi-linkedin.svg",
     alt: "LinkedIn",
+    p:"#",
   },
 ];
 const Footer = () => {
@@ -44,7 +47,7 @@ const Footer = () => {
                 <div className="w-[90%] flex flex-row justify-between mt-48 z-10 font-[Outfit] text-black text-[16px] relative bottom-10">
                     <div className="flex flex-row gap-x-6 items-end">
                         {socialLinks.map((link, index) => (
-                            <a key={index} href="#" className="cursor-pointer hover:scale-110 transition-transform">
+                            <a key={index} href={link.p} className="cursor-pointer hover:scale-110 transition-transform">
                                 <img src={link.icon} alt={link.alt} className="w-8 h-8" />
                             </a>
                         ))}
