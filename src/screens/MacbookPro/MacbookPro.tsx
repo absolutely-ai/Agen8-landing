@@ -16,17 +16,55 @@ import Footer from './Footer'
 const MacbookPro = () => {
   return (
     <div className="bg-[#FFF4EB] min-h-screen relative z-0">
-      {/* Background Grid & Radial Gradient */}
-      <div className="absolute top-0 left-0 w-full h-[1200px] pointer-events-none -z-10 overflow-hidden"
+      {/* Background Grid & Random Radial Gradients */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
            style={{
-             maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)',
-             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)'
+             maskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)',
+             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)'
            }}>
-        <div className="absolute inset-0"
+        {/* Base Background color for Grid blending */}
+        <div className="absolute inset-0 bg-[#FFF4EB]"></div>
+
+        {/* Top Center (Hero) */}
+        <div className="absolute w-[1400px] h-[1400px] left-1/2 -translate-x-1/2 top-[-200px]"
              style={{
-               background: 'radial-gradient(circle at 50% 35%, #FF6D2F 0%, #FFF4EB 60%)'
+               background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)'
              }}>
         </div>
+
+        {/* Right Middle */}
+        <div className="absolute w-[1200px] h-[1200px] right-[-200px] top-[20%]"
+             style={{
+               background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
+               opacity: 0.8
+             }}>
+        </div>
+
+        {/* Left Middle */}
+        <div className="absolute w-[1400px] h-[1400px] left-[-300px] top-[45%]"
+             style={{
+               background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
+               opacity: 0.7
+             }}>
+        </div>
+
+        {/* Center Lower */}
+        <div className="absolute w-[1200px] h-[1200px] left-[20%] top-[70%]"
+             style={{
+               background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
+               opacity: 0.6
+             }}>
+        </div>
+
+        {/* Right Bottom */}
+        <div className="absolute w-[1400px] h-[1400px] right-[-200px] top-[78%]"
+             style={{
+               background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
+               opacity: 0.8
+             }}>
+        </div>
+
+        {/* Grid Overlay */}
         <div className="absolute inset-0 opacity-70" 
              style={{
                backgroundImage: 'linear-gradient(#FFF4EB 1px, transparent 1px), linear-gradient(90deg, #FFF4EB 1px, transparent 1px)',
