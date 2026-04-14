@@ -47,7 +47,7 @@ const Footer = () => {
                 <div className="w-[90%] flex flex-row justify-between mt-48 z-10 font-[Outfit] text-black text-[16px] relative bottom-10">
                     <div className="flex flex-row gap-x-6 items-end">
                         {socialLinks.map((link, index) => (
-                            <a key={index} href={link.p} className="cursor-pointer hover:scale-110 transition-transform">
+                            <a key={index} href={link.p} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:scale-110 transition-transform">
                                 <img src={link.icon} alt={link.alt} className="w-8 h-8" />
                             </a>
                         ))}
@@ -71,7 +71,7 @@ const Footer = () => {
             
 
             {/* Giant watermark */}
-            <div className="absolute bottom-[-60px] left-0 right-0 w-full overflow-hidden flex justify-center pointer-events-none mix-blend-overlay z-0 select-none">
+            <div className="absolute bottom-[-75px] left-0 right-0 w-full overflow-hidden flex justify-center pointer-events-none mix-blend-overlay z-0 select-none">
                 <span className="font-['Libre_Baskerville'] italic text-[560px] leading-none text-white tracking-tighter" style={{ opacity: 0.15 }}>
                     agen8
                 </span>
