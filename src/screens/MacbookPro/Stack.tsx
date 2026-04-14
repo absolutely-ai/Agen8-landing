@@ -58,8 +58,8 @@ const agents = [
  * Total scroll height of this section = N × SCROLL_PER_CARD_VH.
  */
 const N = agents.length
-const SCROLL_PER_CARD_VH = 75   // how many vh of scroll each card gets
-const CARD_TOP_BASE = 100        // px from viewport top where first card pins (just below fixed navbar)
+const SCROLL_PER_CARD_VH = 90   // how many vh of scroll each card gets
+const CARD_TOP_BASE = 190        // px from viewport top where first card pins (just below fixed navbar)
 const CARD_STACK_OFFSET = 22     // px: each subsequent card pins slightly lower, creating the peek
 
 const Stack = () => {
@@ -88,7 +88,7 @@ const Stack = () => {
           >
             {/* ── Sticky card ── */}
             <div
-              className="bg-white w-[65%] mx-auto rounded-[20px] shadow-2xl flex flex-row overflow-hidden"
+              className=" bg-white w-[65%] mx-auto rounded-[20px] shadow-2xl flex flex-row overflow-hidden"
               style={{
                 position: 'sticky',
                 top:      `${stickyTop}px`,
@@ -99,21 +99,21 @@ const Stack = () => {
               {/* LEFT CONTENT */}
               <div className="w-[55%] flex flex-col justify-center gap-y-4 px-12 py-10">
                 <h3
-                  className="text-[#FF6D2F] text-[36px] font-bold italic leading-tight"
+                  className="text-[#FF6D2F] text-[38px] font-bold italic leading-tight"
                   style={{ fontFamily: "'Libre Baskerville', serif" }}
                 >
                   {agent.title}
                 </h3>
 
                 <p
-                  className="text-black text-[22px] leading-relaxed"
+                  className="text-black text-[24px] leading-relaxed"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {agent.description}
                 </p>
 
                 <ul
-                  className="flex flex-col gap-y-1 text-[17px] text-black"
+                  className="flex flex-col gap-y-1 ml-4 text-[19px] text-black"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {agent.bullets.map((b) => (
@@ -145,11 +145,11 @@ const Stack = () => {
                     'linear-gradient(180deg, #FFE8D2 0%, #FF5500 50%, #FFE8D2 100%)',
                 }}
               >
-                <div className="absolute -bottom-16 right-0 w-[520px] h-[500px]">
+                <div className="absolute right-0 top-1/2 -translate-y-51 w-[420px] h-[420px]">
                   <img
                     src={stack_img}
                     alt="agent preview"
-                    className="w-full h-full object-cover object-left-top"
+                    className="w-full h-full "
                   />
                 </div>
               </div>
