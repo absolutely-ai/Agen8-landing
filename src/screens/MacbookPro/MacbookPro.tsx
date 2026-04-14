@@ -1,6 +1,6 @@
 import { ArrowRight, Check, } from 'lucide-react'
 import '../../index.css'
-import laptop_img from "../../assets/laptop_img.svg"
+import laptop_img from "../../assets/image 20.png"
 import build from "../../assets/build3 logo 1.svg"
 import book_my_show from "../../assets/book_my_show.svg"
 import acko from "../../assets/acko.svg"
@@ -16,8 +16,28 @@ import Footer from './Footer'
 const MacbookPro = () => {
   return (
     <div className="bg-[#FFF4EB] min-h-screen relative z-0">
+      {/* Background Grid & Radial Gradient */}
+      <div className="absolute top-0 left-0 w-full h-[1200px] pointer-events-none -z-10 overflow-hidden"
+           style={{
+             maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)',
+             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 100%)'
+           }}>
+        <div className="absolute inset-0"
+             style={{
+               background: 'radial-gradient(circle at 50% 35%, #FF6D2F 0%, #FFF4EB 60%)'
+             }}>
+        </div>
+        <div className="absolute inset-0 opacity-70" 
+             style={{
+               backgroundImage: 'linear-gradient(#FFF4EB 1px, transparent 1px), linear-gradient(90deg, #FFF4EB 1px, transparent 1px)',
+               backgroundSize: '50px 50px',
+               backgroundPosition: 'center top'
+             }}>
+        </div>
+      </div>
+
       {/* Navbar  */}
-      <div className='fixed top-0 left-0 right-0 z-100 bg-white py-3 rounded-b-full rounded-t-full w-[80%] mx-auto mt-8 shadow-2xl flex justify-between items-center font-[Outfit] '>
+      <div className='fixed top-0 left-0 right-0 z-[100] bg-white py-3 rounded-b-full rounded-t-full w-[80%] mx-auto mt-8 shadow-2xl flex justify-between items-center font-[Outfit] '>
         <div className='ml-10'>
           <svg width="104" height="38" viewBox="0 0 104 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.8424 33.18C15.6384 33.18 14.7284 32.788 14.1124 32.004C13.4964 31.22 13.1884 30.114 13.1884 28.686H12.9784C12.2224 30.058 11.2004 31.15 9.91241 31.962C8.62441 32.746 7.19641 33.138 5.62841 33.138C4.48041 33.138 3.48641 32.928 2.64641 32.508C1.80641 32.088 1.14841 31.514 0.672412 30.786C0.224412 30.03 0.000412293 29.148 0.000412293 28.14C0.000412293 26.824 0.490412 25.62 1.47041 24.528C2.45041 23.408 4.22841 22.288 6.80441 21.168L12.8524 18.522V16.8C12.8524 15.036 12.4884 13.748 11.7604 12.936C11.0604 12.096 9.94041 11.676 8.40041 11.676C7.50441 11.676 6.84641 11.858 6.42641 12.222C6.03441 12.586 5.65641 13.314 5.29241 14.406C4.98441 15.19 4.67641 15.722 4.36841 16.002C4.08841 16.282 3.66841 16.422 3.10841 16.422C2.43641 16.422 1.91841 16.24 1.55441 15.876C1.19041 15.512 1.00841 14.994 1.00841 14.322C1.00841 12.978 1.72241 11.942 3.15041 11.214C4.57841 10.458 6.60841 10.08 9.24041 10.08C12.0684 10.08 14.0564 10.57 15.2044 11.55C16.3804 12.53 16.9684 14.224 16.9684 16.632V26.04C16.9684 27.776 17.1364 29.008 17.4724 29.736C17.8084 30.464 18.3404 30.828 19.0684 30.828C19.3484 30.828 19.6704 30.772 20.0344 30.66C20.4264 30.52 20.7204 30.268 20.9164 29.904L21.5044 30.912C21.1684 31.556 20.5524 32.102 19.6564 32.55C18.7604 32.97 17.8224 33.18 16.8424 33.18ZM7.51841 30.618C8.52641 30.618 9.43641 30.31 10.2484 29.694C11.0604 29.05 11.6904 28.196 12.1384 27.132C12.6144 26.068 12.8524 24.906 12.8524 23.646V20.328C10.7244 21.14 9.03041 21.938 7.77041 22.722C6.51041 23.506 5.60041 24.29 5.04041 25.074C4.50841 25.83 4.24241 26.614 4.24241 27.426C4.24241 28.378 4.55041 29.148 5.16641 29.736C5.78241 30.324 6.56641 30.618 7.51841 30.618ZM28.0863 43.68C24.8103 43.68 22.1923 43.134 20.2323 42.042C18.3003 40.95 17.3343 39.508 17.3343 37.716C17.3343 36.568 17.6983 35.588 18.4263 34.776C19.1823 33.992 20.0923 33.6 21.1563 33.6C21.5763 33.6 21.9963 33.67 22.4163 33.81C22.8643 33.95 23.2703 34.174 23.6343 34.482C22.8783 34.65 22.2623 35.056 21.7863 35.7C21.3103 36.372 21.0723 37.114 21.0723 37.926C21.0723 39.186 21.6883 40.152 22.9203 40.824C24.1803 41.496 25.9303 41.832 28.1703 41.832C32.9023 41.832 35.2683 40.376 35.2683 37.464C35.2683 36.316 34.9183 35.364 34.2183 34.608C33.5463 33.88 32.6223 33.446 31.4463 33.306L23.9283 32.382C22.4163 32.186 21.2403 31.766 20.4003 31.122C19.5603 30.45 19.1403 29.568 19.1403 28.476C19.1403 27.412 19.5323 26.502 20.3163 25.746C21.1003 24.99 22.1363 24.514 23.4243 24.318V24.15C22.1923 23.646 21.1563 22.778 20.3163 21.546C19.5043 20.286 19.0983 18.9 19.0983 17.388C19.0983 15.988 19.4483 14.742 20.1483 13.65C20.8763 12.558 21.8703 11.69 23.1303 11.046C24.3903 10.402 25.8183 10.08 27.4143 10.08C28.6183 10.08 29.7663 10.276 30.8583 10.668C31.9503 11.032 32.8883 11.578 33.6723 12.306C34.5683 11.494 35.3803 10.92 36.1083 10.584C36.8643 10.248 37.5923 10.08 38.2923 10.08C39.2443 10.08 40.0283 10.318 40.6443 10.794C41.2603 11.242 41.5683 11.83 41.5683 12.558C41.5683 13.062 41.4143 13.468 41.1063 13.776C40.7983 14.056 40.3783 14.196 39.8463 14.196C39.3423 14.196 38.9503 14.084 38.6703 13.86C38.3903 13.636 38.1103 13.426 37.8303 13.23C37.5503 13.006 37.1723 12.894 36.6963 12.894C36.0523 12.894 35.3803 13.132 34.6803 13.608C35.0443 14.14 35.2963 14.728 35.4363 15.372C35.6043 15.988 35.6883 16.688 35.6883 17.472C35.6883 19.096 35.4083 20.412 34.8483 21.42C34.2883 22.428 33.5603 23.212 32.6643 23.772C31.7683 24.304 30.8023 24.696 29.7663 24.948C28.7303 25.2 27.7363 25.382 26.7843 25.494C25.9163 25.578 25.1323 25.662 24.4323 25.746C23.7603 25.83 23.2143 25.97 22.7943 26.166C22.4023 26.362 22.2063 26.712 22.2063 27.216C22.2063 27.72 22.4303 28.07 22.8783 28.266C23.3543 28.462 24.0823 28.616 25.0623 28.728L32.1603 29.526C34.1763 29.75 35.7863 30.492 36.9903 31.752C38.1943 33.012 38.7963 34.594 38.7963 36.498C38.7963 38.766 37.8723 40.53 36.0243 41.79C34.1763 43.05 31.5303 43.68 28.0863 43.68ZM27.4983 23.73C28.6743 23.73 29.5843 23.198 30.2283 22.134C30.9003 21.042 31.2363 19.544 31.2363 17.64C31.2363 15.736 30.9003 14.266 30.2283 13.23C29.5843 12.166 28.6603 11.634 27.4563 11.634C26.2523 11.634 25.2863 12.18 24.5583 13.272C23.8583 14.336 23.5083 15.778 23.5083 17.598C23.5083 19.446 23.8723 20.93 24.6003 22.05C25.3283 23.17 26.2943 23.73 27.4983 23.73ZM56.0898 27.678L57.3918 28.854C55.0118 31.738 52.0578 33.18 48.5298 33.18C46.3458 33.18 44.4278 32.704 42.7758 31.752C41.1238 30.8 39.8358 29.484 38.9118 27.804C37.9878 26.096 37.5258 24.122 37.5258 21.882C37.5258 19.586 38.0158 17.556 38.9958 15.792C39.9758 14 41.3198 12.6 43.0278 11.592C44.7638 10.584 46.7658 10.08 49.0338 10.08C51.7218 10.08 53.8078 10.822 55.2918 12.306C56.8038 13.762 57.5598 15.862 57.5598 18.606C57.5598 18.97 57.4758 19.208 57.3078 19.32C57.1678 19.404 56.8178 19.446 56.2578 19.446H42.4398C42.3838 19.67 42.3418 19.95 42.3138 20.286C42.2858 20.594 42.2718 20.944 42.2718 21.336C42.2718 23.268 42.5798 24.962 43.1958 26.418C43.8118 27.874 44.6798 29.008 45.7998 29.82C46.9198 30.604 48.2218 30.996 49.7058 30.996C50.8538 30.996 51.9458 30.73 52.9818 30.198C54.0178 29.666 55.0538 28.826 56.0898 27.678ZM42.7338 17.514H50.4618C51.6098 17.514 52.3098 17.444 52.5618 17.304C52.8418 17.164 52.9818 16.842 52.9818 16.338C52.9818 15.05 52.5618 14.028 51.7218 13.272C50.8818 12.488 49.7618 12.096 48.3618 12.096C46.8778 12.096 45.6598 12.558 44.7078 13.482C43.7558 14.378 43.0978 15.722 42.7338 17.514ZM63.1559 20.538V26.166C63.1559 27.678 63.2119 28.784 63.3239 29.484C63.4639 30.184 63.7859 30.646 64.2899 30.87C64.7939 31.094 65.5779 31.248 66.6419 31.332V32.76H55.6379V31.332C56.6739 31.248 57.4439 31.108 57.9479 30.912C58.4519 30.688 58.7739 30.24 58.9139 29.568C59.0819 28.896 59.1659 27.86 59.1659 26.46V20.874C59.1659 19.222 59.1379 17.892 59.0819 16.884C59.0539 15.848 58.9979 15.148 58.9139 14.784C58.7459 14.028 58.4519 13.552 58.0319 13.356C57.6119 13.132 56.7859 13.02 55.5539 13.02V11.676L62.2739 10.08L62.7779 14.238H62.9459C64.0099 12.922 65.2559 11.9 66.6839 11.172C68.1399 10.444 69.6939 10.08 71.3459 10.08C72.6339 10.08 73.8099 10.29 74.8739 10.71C75.9379 11.13 76.7499 11.704 77.3099 12.432C77.7859 13.076 78.1219 13.916 78.3179 14.952C78.5139 15.96 78.6119 17.36 78.6119 19.152V26.166C78.6119 27.678 78.6819 28.784 78.8219 29.484C78.9619 30.184 79.2699 30.646 79.7459 30.87C80.2499 31.094 81.0059 31.248 82.0139 31.332V32.76H71.1359V31.332C72.1999 31.276 72.9699 31.136 73.4459 30.912C73.9499 30.688 74.2719 30.24 74.4119 29.568C74.5519 28.868 74.6219 27.832 74.6219 26.46V20.916C74.6219 17.752 74.2579 15.54 73.5299 14.28C72.8019 12.992 71.5699 12.348 69.8339 12.348C68.6019 12.348 67.4539 12.684 66.3899 13.356C65.3259 14 64.4999 14.896 63.9119 16.044C63.7159 16.408 63.5619 16.772 63.4499 17.136C63.3379 17.472 63.2539 17.906 63.1979 18.438C63.1699 18.942 63.1559 19.642 63.1559 20.538Z" fill="black"/>
@@ -29,7 +49,7 @@ const MacbookPro = () => {
             <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Pricing</div>
             <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Resources</div>
             <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Use Cases</div>
-            <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Talk to Sales</div>
+            <a href="https://calendly.com/sangwavishvendra/agen8" target="_blank" rel="noopener noreferrer" className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Talk to Sales</a>
           </div>
           <button  className="self-start flex items-center justify-center flex-row gap-x-2 bg-[#FF6D2F] text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg"
               style={{ fontFamily: "'Outfit', sans-serif", fontSize: '16px', fontWeight: 500 }}       >
@@ -45,9 +65,12 @@ const MacbookPro = () => {
 <circle cx="8" cy="8" r="8" fill="#FF6D2F"/>
             </svg>
           </div>
+          <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='transition-all duration-300 hover:text-[#FF6D2F] hover:scale-105 hover:shadow-2xl'>
+          {/* <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{width: 250, height: 54}} width="250" height="54" /> */}
           <span className='font-[Outfit] pl-2 '>
             producthunt
           </span>
+          </a>
         </div>
 
         {/* main content */}
@@ -76,12 +99,12 @@ const MacbookPro = () => {
             </div>
 
             <div className='bg-white w-[85%] py-5 rounded-[24px] mt-12 shadow-2xl flex flex-row items-center justify-center'>
-              <textarea className='w-full outline-none border-none px-5 font-[sans-serif] resize-none bg-transparent leading-snug mt-2' rows={2} placeholder='Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST.'></textarea>
+              <textarea className='w-full outline-none border-none px-5 font-[sans-serif] resize-none bg-transparent leading-snug mt-2' rows={3} placeholder='Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST.'></textarea>
               <button className='px-6 cursor-pointer'>
                 <div className='bg-[#FF6D2F] rounded-full w-[45px] h-[45px] flex justify-center items-center'>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                  </svg>
 
                 </div>
               </button>
@@ -89,6 +112,7 @@ const MacbookPro = () => {
           </div>
 
           <div className='bg-white w-[50%] rounded-[20px] shadow-2xl overflow-hidden relative'>
+           
             <img src={laptop_img} alt="laptop_img" className='absolute left-40'/>
           </div>
 

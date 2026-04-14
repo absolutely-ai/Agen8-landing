@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { X, Check } from "lucide-react"
 import ThreeDot from "../../components/ThreeDot"
 
 const Command = () => {
+  const [activeTab, setActiveTab] = useState('Startups')
+  const tabs = ['Startups', 'Scaleups', 'Analysts', 'Operations']
   return (
     <div className="w-full mx-auto pb-40">
         <div className="w-[80%] mx-auto">
@@ -119,21 +122,22 @@ const Command = () => {
                 <div className="flex flex-row gap-x-10">
                     {/* Left Sidebar */}
                     <div className="w-[28%] flex flex-col gap-y-4">
-                        {/* Active Item */}
-                        <div className="flex flex-row items-center bg-[#FFEAE0] text-[#FF6D2F] rounded-[16px] p-5 relative cursor-pointer shadow-sm">
-                            <div className="absolute left-[0px] top-[20%] bottom-[20%] w-[4px] bg-[#FF6D2F] rounded-r-lg"></div>
-                            <span className="font-[Outfit] font-bold text-[22px] ml-4">Startups</span>
-                        </div>
-                        {/* Inactive Items */}
-                        <div className="flex flex-row items-center p-5 cursor-pointer hover:bg-white/40 rounded-[16px] transition-colors">
-                            <span className="font-[Outfit] font-bold text-[22px] text-black ml-4">Scaleups</span>
-                        </div>
-                        <div className="flex flex-row items-center p-5 cursor-pointer hover:bg-white/40 rounded-[16px] transition-colors">
-                            <span className="font-[Outfit] font-bold text-[22px] text-black ml-4">Analysts</span>
-                        </div>
-                        <div className="flex flex-row items-center p-5 cursor-pointer hover:bg-white/40 rounded-[16px] transition-colors">
-                            <span className="font-[Outfit] font-bold text-[22px] text-black ml-4">Operations</span>
-                        </div>
+                        {tabs.map((tab) => (
+                            <div 
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className={`flex flex-row items-center rounded-[16px] p-5 cursor-pointer transition-colors ${
+                                    activeTab === tab ? 'bg-[#FFEAE0] text-[#FF6D2F] relative shadow-sm' : 'text-black hover:bg-white/40'
+                                }`}
+                            >
+                                {activeTab === tab && (
+                                    <div className="absolute left-[0px] top-[20%] bottom-[20%] w-[4px] bg-[#FF6D2F] rounded-r-lg"></div>
+                                )}
+                                <span className="font-[Outfit] font-bold text-[22px] ml-4">
+                                    {tab}
+                                </span>
+                            </div>
+                        ))}
                     </div>
 
                     {/* Right Content Card */}

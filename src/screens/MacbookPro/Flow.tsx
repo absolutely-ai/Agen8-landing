@@ -156,8 +156,7 @@ const Flow = () => {
                 </div>
                 
                 <div className="bg-[#FBFBFB] shadow-2xl rounded-[20px] w-full ml-10">
-                    <ThreeDot/>
-                    
+                    <ThreeDot/>                    
                 </div>
                 
                 

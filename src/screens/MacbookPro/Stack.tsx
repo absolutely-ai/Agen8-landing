@@ -88,7 +88,7 @@ const Stack = () => {
           >
             {/* ── Sticky card ── */}
             <div
-              className=" bg-white w-[65%] mx-auto rounded-[20px] shadow-2xl flex flex-row overflow-hidden"
+              className=" bg-white w-[70%] mx-auto rounded-[20px] shadow-2xl flex flex-row overflow-hidden"
               style={{
                 position: 'sticky',
                 top:      `${stickyTop}px`,
@@ -97,7 +97,7 @@ const Stack = () => {
               }}
             >
               {/* LEFT CONTENT */}
-              <div className="w-[55%] flex flex-col justify-center gap-y-4 px-12 py-10">
+              <div className="w-[55%] flex flex-col justify-center gap-y-4 px-12 py-12">
                 <h3
                   className="text-[#FF6D2F] text-[38px] font-bold italic leading-tight"
                   style={{ fontFamily: "'Libre Baskerville', serif" }}
@@ -145,7 +145,7 @@ const Stack = () => {
                     'linear-gradient(180deg, #FFE8D2 0%, #FF5500 50%, #FFE8D2 100%)',
                 }}
               >
-                <div className="absolute right-0 top-1/2 -translate-y-51 w-[420px] h-[420px]">
+                <div className="absolute right-0 top-1/2 -translate-y-49.5 w-[420px] h-[420px]">
                   <img
                     src={stack_img}
                     alt="agent preview"
