@@ -17,7 +17,7 @@ const MacbookPro = () => {
   return (
     <div className="bg-[#FFF4EB] min-h-screen relative z-0">
       {/* Background Grid & Random Radial Gradients */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
+      <div className="absolute -top-30 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
            style={{
              maskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)',
              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)'
@@ -26,7 +26,7 @@ const MacbookPro = () => {
         <div className="absolute inset-0 bg-[#FFF4EB]"></div>
 
         {/* Top Center (Hero) */}
-        <div className="absolute w-[1400px] h-[1400px] left-1/2 -translate-x-1/2 top-[-200px]"
+        <div className="absolute w-[1800px] h-[1800px] left-1/2 -translate-x-1/2 top-[-500px]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)'
              }}>
@@ -36,7 +36,7 @@ const MacbookPro = () => {
         <div className="absolute w-[1200px] h-[1200px] right-[-200px] top-[20%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
-               opacity: 0.8
+               
              }}>
         </div>
 
@@ -44,7 +44,7 @@ const MacbookPro = () => {
         <div className="absolute w-[1400px] h-[1400px] left-[-300px] top-[45%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
-               opacity: 0.7
+               
              }}>
         </div>
 
@@ -52,7 +52,7 @@ const MacbookPro = () => {
         <div className="absolute w-[1200px] h-[1200px] left-[20%] top-[70%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
-               opacity: 0.6
+               
              }}>
         </div>
 
@@ -60,7 +60,7 @@ const MacbookPro = () => {
         <div className="absolute w-[1400px] h-[1400px] right-[-200px] top-[78%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
-               opacity: 0.8
+               
              }}>
         </div>
 
@@ -104,10 +104,10 @@ const MacbookPro = () => {
             </svg>
           </div>
           <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='transition-all duration-300 hover:text-[#FF6D2F] hover:scale-105 hover:shadow-2xl'>
-          {/* <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{width: 250, height: 54}} width="250" height="54" /> */}
-          <span className='font-[Outfit] pl-2 '>
+          <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{width: 250, height: 54}} width="250" height="54" />
+          {/* <span className='font-[Outfit] pl-2 '>
             producthunt
-          </span>
+          </span> */}
           </a>
         </div>
 
@@ -168,8 +168,7 @@ const MacbookPro = () => {
         </div>
       </div>
 
-      <div className='flex flex-row mx-auto mt-50 items-center justify-center w-[80%]'>
-        <div className='flex flex-row gap-x-3 items-center'>
+            <div className='flex flex-row gap-x-3 items-center justify-center mt-20'>
           <span className='font-[Outfit] text-[40px] font-bold'>
             Teams already running on
           </span>
@@ -180,18 +179,40 @@ const MacbookPro = () => {
             </svg>
           </div>
 
-        </div>
+            </div>
+      <div className='flex flex-row mx-auto mt-50 items-center justify-center w-[80%]'>
+        
 
 
       </div>
 
-      <div className='flex flex-row w-full mt-14 items-center justify-evenly'>
-        <img src={build} alt="" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-        <img src={book_my_show} alt="" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-        <img src={acko} alt="" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-        <img src={makers_asylum} alt="" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-        <img src={your_erp} alt="" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-        <img src={ozu} alt="" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+      <div className='w-full mt-14 overflow-hidden'>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          width: 'max-content',
+          animation: 'marquee-scroll 20s linear infinite',
+        }}>
+          {/* First set */}
+          <div className='flex flex-row items-center gap-x-16 px-8'>
+            <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className='flex flex-row items-center gap-x-16 px-8'>
+            <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+          </div>
+        </div>
       </div>
       
       <div className='mt-20 pb-10'>
