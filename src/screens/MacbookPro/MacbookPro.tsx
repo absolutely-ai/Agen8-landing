@@ -33,7 +33,7 @@ const MacbookPro = () => {
         </div>
 
         {/* Right Middle */}
-        <div className="absolute w-[1200px] h-[1200px] right-[-200px] top-[20%]"
+        <div className="absolute w-[1800px] h-[1800px] right-[-200px] top-[20%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
                
@@ -49,7 +49,7 @@ const MacbookPro = () => {
         </div>
 
         {/* Center Lower */}
-        <div className="absolute w-[1200px] h-[1200px] left-[20%] top-[70%]"
+        <div className="absolute w-[1700px] h-[1700px] left-[20%] top-[70%]"
              style={{
                background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)',
                
