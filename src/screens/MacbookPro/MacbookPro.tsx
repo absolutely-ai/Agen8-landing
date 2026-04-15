@@ -199,7 +199,7 @@ const MacbookPro = () => {
           animation: 'marquee-scroll 20s linear infinite',
         }}>
           {/* First set */}
-          <div className='flex flex-row items-center gap-x-16 px-8'>
+          <div className='flex flex-row items-center gap-x-20 px-8'>
             <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
