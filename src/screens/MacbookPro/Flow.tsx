@@ -1,8 +1,12 @@
 import { ChevronDown } from "lucide-react"
+import { useState } from "react"
 import ThreeDot from "../../components/ThreeDot"
+import Waitlist from "../../components/Waitlist"
 const Flow = () => {
+    const [showWaitlist, setShowWaitlist] = useState(false)
   return (
     <div className="w-full">
+        <Waitlist isOpen={showWaitlist} onClose={() => setShowWaitlist(false)} />
         <div className="relative w-full">
             <div className="absolute top-120 left-120 -z-10">
                 <svg width="643" height="1277" viewBox="0 0 643 1277" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +73,7 @@ const Flow = () => {
                     <div className="w-full flex flex-row-reverse ">
                         <div className='bg-white w-[85%] py-5 rounded-[24px] mr-7 mt-10 shadow-2xl flex flex-row items-center justify-center'>
                             <textarea className='w-full outline-none border-none px-5 font-[sans-serif] resize-none bg-transparent leading-snug mt-2' rows={3} placeholder='Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST.'></textarea>
-                            <button className='px-6 cursor-pointer'>
+                            <button className='px-6 cursor-pointer transition-all duration-300 hover:scale-105 bg-none' onClick={() => setShowWaitlist(true)}>
                                 <div className='bg-[#FF6D2F] rounded-full w-[45px] h-[45px] flex justify-center items-center'>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

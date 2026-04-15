@@ -1,4 +1,6 @@
 import { ArrowRight } from "lucide-react"
+import { useState } from "react"
+import Waitlist from "../../components/Waitlist"
 const socialLinks = [
   {
     icon: "https://c.animaapp.com/mk3i7h91OjH2GA/img/line-md-instagram.svg",
@@ -17,8 +19,10 @@ const socialLinks = [
   },
 ];
 const Footer = () => {
+    const [showWaitlist, setShowWaitlist] = useState(false)
     return (
         <div className="w-full relative overflow-hidden bg-linear-to-b from-[#FFF4EB] via-[#FFB793] to-[#FF6D2F] pt-40 pb-10">
+            <Waitlist isOpen={showWaitlist} onClose={() => setShowWaitlist(false)} />
            <div className="w-[80%] mx-auto flex flex-col items-center relative z-10 pb-100 ">
                 <div className="text-center flex flex-col tracking-tight">
                     <span className="font-[Outfit] text-[64px] font-bold text-black leading-tight">
@@ -36,7 +40,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-row gap-x-6 mt-12">
-                    <button className="bg-[#FF6D2F] text-white flex flex-row gap-x-2 items-center px-8 py-4 rounded-[12px] font-[Outfit] text-[18px] transition-transform hover:scale-105 shadow-xl cursor-default">
+                    <button className="bg-[#FF6D2F] text-white flex flex-row gap-x-2 items-center px-8 py-4 rounded-[12px] font-[Outfit] text-[18px] transition-transform hover:scale-105 shadow-xl cursor-default" onClick={()=>setShowWaitlist(true)}>
                         Build your first agent <ArrowRight size={20} strokeWidth={2.5} />
                     </button>
                     <a href="https://calendly.com/sangwavishvendra/agen8" target="_blank" rel="noopener noreferrer" className="border-2 border-[#FF6D2F] text-[#FF6D2F] bg-transparent flex flex-row gap-x-2 items-center px-8 py-4 rounded-[12px] font-[Outfit] text-[18px] transition-all hover:bg-[#FF6D2F]/10 cursor-pointer">

@@ -1,10 +1,14 @@
 import { ArrowRight, Video as VideoIcon, Play } from "lucide-react"
+import { useState } from "react"
+import Waitlist from "../../components/Waitlist"
 
 const Video = () => {
+    const [showWaitlist, setShowWaitlist] = useState(false)
   return (
     <div className="w-full pb-20">
+        <Waitlist isOpen={showWaitlist} onClose={() => setShowWaitlist(false)} />
         <div className="w-full">
-            <button className="flex flex-row items-center gap-x-2 bg-[#FF6D2F] rounded-[12px] px-5 py-4 mx-auto cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <button className="flex flex-row items-center gap-x-2 bg-[#FF6D2F] rounded-[12px] px-5 py-4 mx-auto cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl" onClick={() => setShowWaitlist(true)}>
                 <span className="font-[Outfit] text-white font-normal text-[24px]">
                     Build your first agent
                 </span>

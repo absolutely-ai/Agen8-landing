@@ -97,7 +97,7 @@ const Command = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center mt-80">
+            {/* <div className="flex flex-col justify-center items-center mt-80">
                 <span className="text-black font-[Outfit] text-[40px] font-bold leading-tight">
                     Command Centre
                 </span>
@@ -111,9 +111,9 @@ const Command = () => {
                     <ThreeDot/>
                 </div>
                 <div className="bg-white rounded-b-[20px] h-[500px] shadow-2xl"></div>
-            </div>
+            </div> */}
         </div>
-        <div className="w-[80%] mx-auto mt-50 mb-30">
+        <div className="w-[80%] mx-auto mt-70 mb-30">
             <div className="flex flex-col">
                 <h2 className="text-[48px] text-black font-[Outfit] font-bold mb-14">
                     Who runs on <span className="font-['Libre_Baskerville'] italic text-[#FF6D2F]">agen8</span>.

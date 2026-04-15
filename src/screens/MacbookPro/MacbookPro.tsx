@@ -1,9 +1,10 @@
+import { useState } from 'react'
 import { ArrowRight, Check, } from 'lucide-react'
 import '../../index.css'
 import laptop_img from "../../assets/image 20.png"
 import build from "../../assets/build3 logo 1.svg"
 import book_my_show from "../../assets/book_my_show.svg"
-import acko from "../../assets/acko.svg"
+// import acko from "../../assets/acko.svg"
 import makers_asylum from "../../assets/makers_asylum.svg"
 import ozu from "../../assets/ozu-logo-white 1.svg"
 import your_erp from "../../assets/your_erp_coach.svg"
@@ -12,8 +13,11 @@ import Flow from './Flow'
 import Video from './Video'
 import Command from './Command'
 import Footer from './Footer'
+import Waitlist from '../../components/Waitlist'
 
 const MacbookPro = () => {
+  const [showWaitlist, setShowWaitlist] = useState(false)
+
   return (
     <div className="bg-[#FFF4EB] min-h-screen relative z-0">
       {/* Background Grid & Random Radial Gradients */}
@@ -84,14 +88,14 @@ const MacbookPro = () => {
         </div>
         <div className='flex gap-x-10 mr-10 items-center'>
           <div className='flex gap-x-7 text-[#A2A2A2] text-[16px] font-normal'>
-            <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Pricing</div>
-            <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Resources</div>
+            {/* <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Pricing</div>
+            <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Resources</div> */}
             <div className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Use Cases</div>
             <a href="https://calendly.com/sangwavishvendra/agen8" target="_blank" rel="noopener noreferrer" className='cursor-pointer transition-all duration-300 hover:text-[#FF6D2F]'>Talk to Sales</a>
           </div>
-          <button  className="self-start flex items-center justify-center flex-row gap-x-2 bg-[#FF6D2F] text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg"
+          <button onClick={() => setShowWaitlist(true)} className="self-start flex items-center justify-center flex-row gap-x-2 bg-[#FF6D2F] text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg"
               style={{ fontFamily: "'Outfit', sans-serif", fontSize: '16px', fontWeight: 500 }}       >
-            <span className='font-normal'>Login</span> <ArrowRight color='white'/></button>
+            <span className='font-normal'>Join Waitlist</span> <ArrowRight color='white'/></button>
         </div>
       </div>
 
@@ -138,7 +142,7 @@ const MacbookPro = () => {
 
             <div className='bg-white w-[85%] py-5 rounded-[24px] mt-12 shadow-2xl flex flex-row items-center justify-center'>
               <textarea className='w-full outline-none border-none px-5 font-[sans-serif] resize-none bg-transparent leading-snug mt-2' rows={3} placeholder='Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST.'></textarea>
-              <button className='px-6 cursor-pointer'>
+              <button className='px-6 cursor-pointer transition-all duration-300 hover:scale-105 bg-none' onClick={() => setShowWaitlist(true)}>
                 <div className='bg-[#FF6D2F] rounded-full w-[45px] h-[45px] flex justify-center items-center'>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -198,7 +202,7 @@ const MacbookPro = () => {
           <div className='flex flex-row items-center gap-x-16 px-8'>
             <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-            <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
             <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
@@ -207,7 +211,7 @@ const MacbookPro = () => {
           <div className='flex flex-row items-center gap-x-16 px-8'>
             <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
-            <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
+            {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
             <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/>
             <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer'/>
@@ -240,6 +244,9 @@ const MacbookPro = () => {
       <div>
         <Footer/>
       </div>
+
+      {/* Waitlist Modal */}
+      <Waitlist isOpen={showWaitlist} onClose={() => setShowWaitlist(false)} />
     </div>
   )
 }
