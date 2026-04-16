@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import stack_img from '../../assets/stack_lap_img.PNG'
+import stack_img from '../../assets/stack_lap_img.png'
 
 const agents = [
   {
