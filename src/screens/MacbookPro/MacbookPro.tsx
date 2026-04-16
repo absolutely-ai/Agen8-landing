@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight} from 'lucide-react'
 import '../../index.css'
 
 import build from "../../assets/build3 logo 1.svg"
@@ -30,9 +30,9 @@ const MacbookPro = () => {
         <div className="absolute inset-0 bg-[#FFF4EB]"></div>
 
         {/* Top Center (Hero) */}
-        <div className="absolute w-[1800px] h-[1800px] left-1/2 -translate-x-1/2 top-[-500px]"
+        <div className="absolute w-[1200px] h-[500px] left-1/2 -translate-x-1/2 top-[250px]"
           style={{
-            background: 'radial-gradient(circle, #FF6D2F 0%, rgba(255, 109, 47, 0) 60%)'
+            background: 'radial-gradient(ellipse closest-side, rgba(255, 109, 47, 1) 0%, rgba(255, 109, 47, 0) 100%)'
           }}>
         </div>
 
@@ -101,55 +101,53 @@ const MacbookPro = () => {
       </div>
 
       {/* Hero Section */}
-      <div className='mt-24 md:mt-35 flex flex-col items-center justify-center w-[92%] md:w-[80%] mx-auto z-10 px-2'>
-        <div className='flex items-center gap-x-2 mb-4 justify-center'>
-          <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='transition-all duration-300 hover:text-[#FF6D2F] hover:scale-105 hover:shadow-2xl '>
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{ width: 200, height: 44 }} className="md:!w-[250px] md:!h-[54px]" width="250" height="54" />
+      <div className='mt-40 flex flex-col items-center justify-center w-[90%] sm:w-[80%] mx-auto z-10'>
+        <div className='flex items-center gap-x-2 mb-6 justify-center'>
+          <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='flex items-center justify-center gap-x-2 transition-all duration-300 hover:scale-105 bg-white border border-[#FF6D2F]/40 hover:border-[#FF6D2F] rounded-full px-4 py-1.5 shadow-sm text-[13px]'>
+            <div className="bg-[#FF6D2F] text-white rounded-full w-[18px] h-[18px] flex items-center justify-center text-[10px] font-bold">P</div>
+            <span className="font-[Outfit] text-[#444] font-medium">Loved on Product Hunt</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A2A2A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
           </a>
         </div>
         {/* Main Heading */}
-
-        <h1 className='text-[32px] md:text-[56px] gap-y-4 leading-[1.1] text-center text-[#111] font-[Outfit]'>
-          <span className="italic  font-bold font-[Libre_Baskerville] tracking-tighter pr-2">Ai agents</span> <span className="font-[Outfit] font-normal">for teams </span>
+        <h1 className='text-[56px] sm:text-[64px] md:text-[76px] leading-[1.05] text-center text-[#111] font-[Outfit]'>
+          <span className="italic font-normal font-[Libre_Baskerville] text-[#FF6D2F] pr-2">AI Agents</span> <span className="font-[Outfit] font-bold tracking-tight">for teams</span>
           <br />
-          <span className="font-[Outfit] font-normal">that run </span> <span className="italic font-bold font-[Libre_Baskerville] tracking-tighter pl-2">the show.</span>
+          <span className="font-[Outfit] font-bold tracking-tight">that run </span> <span className="italic font-normal font-[Libre_Baskerville] text-[#FF6D2F] pl-2">the show</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 md:mt-6 text-[15px] md:text-[20px] font-[Outfit] text-[#222] font-normal text-center max-w-[800px] px-2">
-          Stop managing prompts. Start running systems with agent that research, execute and deliver.
+        <p className="mt-8 text-[17px] sm:text-[19px] font-[Outfit] text-[#333] font-medium text-center max-w-[800px]">
+          Stop managing prompts. Start running systems with agents that research, execute, and deliver.
         </p>
 
         {/* Input Box */}
-        <div className="mt-8 md:mt-12 w-full max-w-[800px] relative">
+        <div className="mt-14 w-full max-w-[760px] relative">
           {/* Top Tab */}
-          <div className="absolute -top-[40px] md:-top-[45px] left-0 bg-[#FDE7D1] px-4 md:px-6 py-[10px] md:py-[12px] rounded-t-[12px] flex items-center gap-x-2 md:gap-x-3 border-b-0 z-0">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6D2F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
+          <div className="absolute bottom-full left-0 bg-[#FDE7D1] px-5 py-[8px] rounded-t-[10px] flex items-center gap-x-2 z-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6D2F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4Z" />
             </svg>
-            <span className="font-[Outfit] text-[13px] md:text-[15px] font-medium text-[#333]">What are you looking for?</span>
+            <span className="font-[Outfit] text-[14px] font-semibold text-[#111]">What are you looking for?</span>
           </div>
 
           {/* Main Input Box */}
-          <div className="bg-white rounded-[16px] md:rounded-[20px] rounded-tl-none shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10 min-h-[120px] md:min-h-[140px] p-3 flex flex-col">
+          <div className="bg-white rounded-[24px] rounded-tl-none shadow-[0_20px_50px_rgba(255,109,47,0.15)] relative z-10 min-h-[120px] p-5 pb-5">
             <textarea
-              className="w-full resize-none outline-none font-[sans-serif] text-[14px] md:text-[18px] text-gray-700 placeholder-gray-400 bg-transparent grow leading-relaxed"
-              rows={3}
-              placeholder="E.g., develop an automated finance optimizer linking banks/investments: tracks transactions with fraud detection, forecasts flow, reallocates funds, invests change, emails weekly summaries, and auto-pays bills on the 1st."
+              className="w-full resize-none outline-none font-[sans-serif] text-[16px] text-gray-700 placeholder-gray-400 bg-transparent leading-relaxed placeholder:font-light pr-12 min-h-[70px]"
+              placeholder="e.g. Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST."
             ></textarea>
-            <div className="flex justify-end">
-              <button className="bg-[#FF6D2F] rounded-full w-[40px] h-[40px] md:w-[45px] md:h-[45px] flex justify-center items-center cursor-pointer transition-all duration-300 hover:scale-105 shadow-[0_4px_15px_rgba(255,109,47,0.4)]" onClick={() => setShowWaitlist(true)}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
+            <button className="absolute bottom-5 right-5 bg-[#FF6D2F] rounded-full w-[40px] h-[40px] flex justify-center items-center cursor-pointer transition-all duration-300 hover:scale-105 shadow-[0_4px_15px_rgba(255,109,47,0.4)]" onClick={() => setShowWaitlist(true)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           </div>
         </div>
 
         {/* Footer text */}
-        <div className="mt-6 md:mt-8 mb-4 md:mb-6">
-          <span className="font-['Libre_Baskerville'] italic text-[14px] md:text-[18px] text-[#222]">
+        <div className="mt-6 mb-8">
+          <span className="font-['Libre_Baskerville'] italic text-[16px] text-[#444]">
             Unlimited integrations. Zero constraints.
           </span>
         </div>
