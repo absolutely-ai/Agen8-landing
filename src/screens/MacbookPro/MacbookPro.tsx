@@ -121,7 +121,7 @@ const MacbookPro = () => {
         </p>
 
         {/* Input Box */}
-        <div className="mt-8 md:mt-12 w-full max-w-[800px] relative">
+        <div className="mt-14 md:mt-12 w-full max-w-[800px] relative">
           {/* Top Tab */}
           <div className="absolute -top-[40px] md:-top-[45px] left-0 bg-[#FDE7D1] px-4 md:px-6 py-[10px] md:py-[12px] rounded-t-[12px] flex items-center gap-x-2 md:gap-x-3 border-b-0 z-0">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6D2F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
