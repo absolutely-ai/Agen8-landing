@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { X, Check } from "lucide-react"
-import ThreeDot from "../../components/ThreeDot"
 
 const Command = () => {
   const [activeTab, setActiveTab] = useState('Startups')
