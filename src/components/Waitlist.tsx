@@ -36,9 +36,17 @@ const Waitlist: React.FC<WaitlistProps> = ({ isOpen, onClose }) => {
     } catch (err: any) {
       console.error('Error adding to waitlist:', err)
       setStatus('idle')
-      toast.error(err.message || 'Something went wrong. Try again.', {
-        duration: 3500,
-      })
+      
+      if (err.code === '23505') {
+        toast.error("You are already waitlisted!", {
+          duration: 3500,
+          icon: '✨'
+        })
+      } else {
+        toast.error(err.message || 'Something went wrong. Try again.', {
+          duration: 3500,
+        })
+      }
     }
   }
 
