@@ -1,16 +1,11 @@
 import { screenGraphPlugin } from "@animaapp/vite-plugin-screen-graph";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import tailwind from "tailwindcss";
 import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), mode === "development" && screenGraphPlugin()],
+  plugins: [react(), tailwindcss(), mode === "development" && screenGraphPlugin()],
   publicDir: "./public",
   base: "./",
-  css: {
-    postcss: {
-      plugins: [tailwind()],
-    },
-  },
 }));
