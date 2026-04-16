@@ -115,7 +115,7 @@ const EarlyAccess: React.FC = () => {
         setStatus('loading');
         try {
             const { error } = await supabase
-                .from('waitlist')
+                .from('agen8_wait')
                 .insert([{ email }]);
 
             if (error) throw error;
