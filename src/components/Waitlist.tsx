@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowRight, X } from 'lucide-react'
 import toast from 'react-hot-toast'
+import { supabase } from '../lib/supabase'
 
 interface WaitlistProps {
   isOpen: boolean
@@ -12,47 +13,41 @@ const Waitlist: React.FC<WaitlistProps> = ({ isOpen, onClose }) => {
   const [status, setStatus] = useState<'idle' | 'loading'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
-    
-    // try {
-    //   const { error } = await supabase
-    //     .from('waitlist')
-    //     .insert([{ email }])
-
-    //   if (error) throw error
-
-    //   setStatus('idle')
-    //   setEmail('')
-    //   onClose()
-
-    //   // Show toast after modal closes
-    //   toast.success("You're on the waitlist!", {
-    //     duration: 3500,
-    //   })
-    // } catch (err: any) {
-    //   console.error('Error adding to waitlist:', err)
-    //   setStatus('idle')
-    //   toast.error(err.message || 'Something went wrong. Try again.', {
-    //     duration: 3500,
-    //   })
-    // }
-
-
     e.preventDefault()
     if (!email) return
 
     setStatus('loading')
 
-    // Simulate 2-3s loading
-    await new Promise((resolve) => setTimeout(resolve, 2500))
+    try {
+      const { error } = await supabase
+        .from('agen8_wait')
+        .insert([{ email }])
 
-    setStatus('idle')
-    setEmail('')
-    onClose()
+      if (error) throw error
 
-    // Show toast after modal closes
-    toast.success("You're on the waitlist!", {
-      duration: 3500,
-    })
+      setStatus('idle')
+      setEmail('')
+      onClose()
+
+      // Show toast after modal closes
+      toast.success("You're on the waitlist!", {
+        duration: 3500,
+      })
+    } catch (err: any) {
+      console.error('Error adding to waitlist:', err)
+      setStatus('idle')
+      
+      if (err.code === '23505') {
+        toast.error("You are already waitlisted!", {
+          duration: 3500,
+          icon: '✨'
+        })
+      } else {
+        toast.error(err.message || 'Something went wrong. Try again.', {
+          duration: 3500,
+        })
+      }
+    }
   }
 
   if (!isOpen) return null

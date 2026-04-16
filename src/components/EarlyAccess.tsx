@@ -129,7 +129,11 @@ const EarlyAccess: React.FC = () => {
         } catch (err: any) {
             console.error('Error adding to waitlist:', err);
             setStatus('error');
-            alert(`Error: ${err.message || JSON.stringify(err)}`);
+            if (err.code === '23505') {
+                alert("You are already waitlisted!");
+            } else {
+                alert(`Error: ${err.message || JSON.stringify(err)}`);
+            }
         }
     };
 
