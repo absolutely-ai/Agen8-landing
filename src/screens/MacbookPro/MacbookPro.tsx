@@ -19,9 +19,9 @@ const MacbookPro = () => {
   const [showWaitlist, setShowWaitlist] = useState(false)
 
   return (
-    <div className="bg-[#FFF4EB] min-h-screen relative z-0 overflow-x-hidden">
+    <div className="bg-[#FFF4EB] min-h-screen relative z-0">
       {/* Background Grid & Random Radial Gradients */}
-      <div className="absolute -top-30 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
+      <div className="absolute -top-30 left-0 w-full h-[150%] pointer-events-none -z-10 overflow-hidden"
         style={{
           maskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)'
