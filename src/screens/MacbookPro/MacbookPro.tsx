@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ArrowRight, Check, } from 'lucide-react'
 import '../../index.css'
-import laptop_img from "../../assets/image 20.png"
+
 import build from "../../assets/build3 logo 1.svg"
 import book_my_show from "../../assets/book_my_show.svg"
 // import acko from "../../assets/acko.svg"
@@ -100,75 +100,57 @@ const MacbookPro = () => {
       </div>
 
       {/* Hero Section */}
-      <div className='mt-50 flex flex-col w-[80%] mx-auto'>
-        <div className='flex flex-row justify-between items-center gap-x-2 border border-[#D9D9D9] bg-[#d9d9d957] py-1 w-fit px-6 rounded-b-full rounded-t-full'>
-          <div className='pr-3'>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="8" cy="8" r="8" fill="#FF6D2F"/>
-            </svg>
-          </div>
-          <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='transition-all duration-300 hover:text-[#FF6D2F] hover:scale-105 hover:shadow-2xl'>
-          <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{width: 250, height: 54}} width="250" height="54" />
-          {/* <span className='font-[Outfit] pl-2 '>
-            producthunt
-          </span> */}
+      <div className='mt-32 flex flex-col items-center justify-center w-[90%] sm:w-[80%] mx-auto z-10'>
+        <div className='flex items-center gap-x-2 mb-5 justify-center'>
+          <a href="https://www.producthunt.com/products/agen8/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-agen8" target="_blank" className='transition-all duration-300 hover:text-[#FF6D2F] hover:scale-105 hover:shadow-2xl '>
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1154411&theme=light" alt="agen8 - infinite&#0032;possibilities&#0044;&#0032;single&#0032;prompt | Product Hunt" style={{width: 250, height: 54}} width="250" height="54" />
           </a>
         </div>
+        {/* Main Heading */}
+       
+        <h1 className='text-[56px] sm:text-[72px] md:text-[84px]gap-y04 leading-[1.05] text-center text-[#111]'>
+          <span className="font-['Libre_Baskerville'] italic font-normal">Ai agents</span> <span className="font-[Outfit] font-light">for teams </span>
+          <br/>
+          <span className="font-[Outfit] font-light">that run </span> <span className="font-['Libre_Baskerville'] italic font-normal">the show.</span>
+        </h1>
 
-        {/* main content */}
-        <div className='flex flex-row mt-4'>
+        {/* Subtitle */}
+        <p className="mt-8 text-[18px] sm:text-[20px] font-[Outfit] text-[#222] font-normal text-center max-w-[800px]">
+          Enable your limitless potential with <span className="font-['Libre_Baskerville'] italic">agen8</span>. You can now automate infinite number of apps simultaneously.
+        </p>
 
-          <div>
-            <div className='flex flex-col'>
-              <div className='flex flex-row items-center'>
-                <span className="font-['Libre_Baskerville'] italic text-[56px] text-[#FF6D2F]">                AI Agents  
-                </span>
-                <span className='font-[Outfit] text-[56px] font-bold ml-4'>
-                  for
-                </span>
-              </div>
-              <span className='font-[Outfit] text-[56px] font-bold'>
-                 teams that run the 
-              </span>
-              <span className='font-[Outfit] text-[56px] font-bold'>
-                show
-              </span>
-            </div>
-            <div className='text-wrap w-[70%]'>
-              <span className='font-[sans-serif] text-[18px] '>
-                Stop managing prompts. Start running systems with agents that research, execute, and deliver.
-              </span>
-            </div>
-
-            <div className='bg-white w-[85%] py-5 rounded-[24px] mt-12 shadow-2xl flex flex-row items-center justify-center'>
-              <textarea className='w-full outline-none border-none px-5 font-[sans-serif] resize-none bg-transparent leading-snug mt-2' rows={3} placeholder='Build a UGC creator that generates content, delivers final assets, and auto-uploads videos to YouTube daily at 5 PM IST.'></textarea>
-              <button className='px-6 cursor-pointer transition-all duration-300 hover:scale-105 bg-none' onClick={() => setShowWaitlist(true)}>
-                <div className='bg-[#FF6D2F] rounded-full w-[45px] h-[45px] flex justify-center items-center'>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-
-                </div>
+        {/* Input Box */}
+        <div className="mt-16 w-full max-w-[800px] relative">
+          {/* Top Tab */}
+          <div className="absolute -top-[45px] left-0 bg-[#FDE7D1] px-6 py-[12px] rounded-t-[12px] flex items-center gap-x-3 border-b-0 z-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6D2F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4Z"/>
+            </svg>
+            <span className="font-[Outfit] text-[15px] font-medium text-[#333]">What are you looking for?</span>
+          </div>
+          
+          {/* Main Input Box */}
+          <div className="bg-white rounded-[20px] rounded-tl-none p-6 pb-4 sm:p-8 sm:pb-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10 min-h-[130px] flex flex-col">
+            <textarea 
+              className="w-full resize-none outline-none font-[sans-serif] text-[18px] text-gray-700 placeholder-gray-400 bg-transparent grow leading-relaxed" 
+              rows={4} 
+              placeholder="E.g., develop an automated finance optimizer linking banks/investments: tracks transactions with fraud detection, forecasts flow, reallocates funds, invests change, emails weekly summaries, and auto-pays bills on the 1st."
+            ></textarea>
+            <div className="flex justify-end mt-4">
+              <button className="bg-[#FF6D2F] rounded-full w-[45px] h-[45px] flex justify-center items-center cursor-pointer transition-all duration-300 hover:scale-105 shadow-[0_4px_15px_rgba(255,109,47,0.4)]" onClick={() => setShowWaitlist(true)}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.9419 1.99468L10.9712 12.9654M21.9419 1.99468L14.9605 21.9415L10.9712 12.9654M21.9419 1.99468L1.99512 8.97607L10.9712 12.9654" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </div>
-
-          <div className='bg-white w-[50%] rounded-[20px] shadow-2xl overflow-hidden relative'>
-           
-            <img src={laptop_img} alt="laptop_img" className='absolute left-40'/>
-          </div>
-
         </div>
 
-        <div className='flex flex-row gap-x-10 text-[16px] font-[Outfit] text-[#A3A3A3] mt-10'>
-          <div className='flex flex-row gap-x-2'>
-            <Check color='#A3A3A3'/>
-            <span>No code required</span>
-          </div>
-          <div className='flex flex-row gap-x-2'>
-            <Check color='#A3A3A3'/>
-            <span>Multi-agent execution</span>
-          </div>
+        {/* Footer text */}
+        <div className="mt-12 mb-10">
+          <span className="font-['Libre_Baskerville'] italic text-[18px] text-[#222]">
+            Unlimited integrations. Zero constraints.
+          </span>
         </div>
       </div>
 

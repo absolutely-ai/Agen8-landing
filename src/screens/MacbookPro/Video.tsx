@@ -4,6 +4,7 @@ import Waitlist from "../../components/Waitlist"
 
 const Video = () => {
     const [showWaitlist, setShowWaitlist] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false)
   return (
     <div className="w-full pb-20">
         <Waitlist isOpen={showWaitlist} onClose={() => setShowWaitlist(false)} />
@@ -55,10 +56,25 @@ const Video = () => {
                 </div>
                 
                 {/* Main Video Box */}
-                <div className="w-full aspect-[16/9] border-8 border-[#FF6D2F] rounded-[24px] bg-white flex justify-center items-center shadow-2xl relative">
-                    <button className="cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95">
-                        <Play fill="#FF6D2F" color="#FF6D2F" size={140} strokeWidth={0} />
-                    </button>
+                <div className="w-full aspect-[16/9] border-8 border-[#FF6D2F] rounded-[24px] bg-white flex justify-center items-center shadow-2xl relative overflow-hidden group">
+                    {!isPlaying ? (
+                        <>
+                            <div className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-300" style={{ backgroundImage: "url('https://img.youtube.com/vi/A30beHR5_no/maxresdefault.jpg')" }}></div>
+                            <button className="cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95 z-10" onClick={() => setIsPlaying(true)}>
+                                <Play fill="#FF6D2F" color="#FF6D2F" size={120} strokeWidth={0} />
+                            </button>
+                        </>
+                    ) : (
+                        <iframe 
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/A30beHR5_no?autoplay=1" 
+                            title="YouTube video player" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerPolicy="strict-origin-when-cross-origin" 
+                            allowFullScreen
+                        ></iframe>
+                    )}
                 </div>
             </div>
         </div>
