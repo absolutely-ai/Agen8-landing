@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight, Check, } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import '../../index.css'
 
 import build from "../../assets/build3 logo 1.svg"
