@@ -108,15 +108,15 @@ const MacbookPro = () => {
         </div>
         {/* Main Heading */}
        
-        <h1 className='text-[56px] sm:text-[72px] md:text-[84px]gap-y04 leading-[1.05] text-center text-[#111]'>
-          <span className="font-['Libre_Baskerville'] italic font-normal">Ai agents</span> <span className="font-[Outfit] font-light">for teams </span>
+        <h1 className='text-[56px] sm:text-[72px] md:text-[84px]gap-y04 leading-[1.05] text-center text-[#111] font-[Outfit]'>
+          <span className="  font-bold">Ai agents</span> <span className="font-[Outfit] font-normal">for teams </span>
           <br/>
-          <span className="font-[Outfit] font-light">that run </span> <span className="font-['Libre_Baskerville'] italic font-normal">the show.</span>
+          <span className="font-[Outfit] font-normal">that run </span> <span className="font-bold">the show.</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-8 text-[18px] sm:text-[20px] font-[Outfit] text-[#222] font-normal text-center max-w-[800px]">
-          Enable your limitless potential with <span className="font-['Libre_Baskerville'] italic">agen8</span>. You can now automate infinite number of apps simultaneously.
+        <p className="mt-8 text-[20px] sm:text-[20px] font-[Outfit] text-[#222] font-normal text-center max-w-[800px]">
+          Stop managing prompts. Start running systems with agent that research, execute and deliver.
         </p>
 
         {/* Input Box */}
@@ -130,7 +130,7 @@ const MacbookPro = () => {
           </div>
           
           {/* Main Input Box */}
-          <div className="bg-white rounded-[20px] rounded-tl-none p-6 pb-4 sm:p-8 sm:pb-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10 min-h-[130px] flex flex-col">
+          <div className="bg-white rounded-[20px] rounded-tl-none shadow-[0_20px_50px_rgba(0,0,0,0.1)] relative z-10 min-h-[140px] p-3 flex flex-col">
             <textarea 
               className="w-full resize-none outline-none font-[sans-serif] text-[18px] text-gray-700 placeholder-gray-400 bg-transparent grow leading-relaxed" 
               rows={4} 
