@@ -21,7 +21,7 @@ const MacbookPro = () => {
   return (
     <div className="bg-[#FFF4EB] min-h-screen relative z-0">
       {/* Background Grid & Random Radial Gradients */}
-      <div className="absolute -top-30 left-0 w-full h-[150%] pointer-events-none -z-10 overflow-hidden"
+      <div className="absolute -top-30 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
         style={{
           maskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 0px, black 200px, black calc(100% - 200px), transparent 100%)'
@@ -30,7 +30,7 @@ const MacbookPro = () => {
         <div className="absolute inset-0 bg-[#FFF4EB]"></div>
 
         {/* Top Center (Hero) */}
-        <div className="absolute w-[1200px] h-[500px] left-1/2 -translate-x-1/2 top-[250px]"
+        <div className="absolute w-[1500px] h-[600px] left-1/2 -translate-x-1/2 top-[230px]"
           style={{
             background: 'radial-gradient(ellipse closest-side, rgba(255, 109, 47, 1) 0%, rgba(255, 109, 47, 0) 100%)'
           }}>
@@ -180,7 +180,7 @@ const MacbookPro = () => {
           animation: 'marquee-scroll 20s linear infinite',
         }}>
           {/* First set */}
-          <div className='flex flex-row items-center gap-x-10 md:gap-x-20 px-4 md:px-8'>
+          <div className='flex flex-row items-center gap-x-10 md:gap-x-16 px-4 md:px-8'>
             <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
             <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
             {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
