@@ -170,9 +170,9 @@ const MacbookPro = () => {
 
       </div>
 
-      <div className='w-full mt-8 md:mt-14 overflow-hidden flex flex-row items-center'>
+      <div className='relative w-full mt-8 md:mt-14 overflow-hidden flex flex-row items-center'>
         {/* First set */}
-        <div className='flex shrink-0 animate-marquee flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16'>
+        <div className='w-max flex shrink-0 animate-marquee flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16'>
           {Array.from({ length: 10 }).map((_, i) => (
             <div key={`set1-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
               <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
@@ -183,7 +183,7 @@ const MacbookPro = () => {
           ))}
         </div>
         {/* Duplicate for seamless loop */}
-        <div className='flex shrink-0 animate-marquee flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16' aria-hidden="true">
+        <div className='absolute top-0 left-0 h-full w-max flex shrink-0 animate-marquee2 flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16' aria-hidden="true">
           {Array.from({ length: 10 }).map((_, i) => (
             <div key={`set2-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
               <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
