@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { ArrowRight} from 'lucide-react'
 import '../../index.css'
 
-import build from "../../assets/build3 logo 1.svg"
 import book_my_show from "../../assets/book_my_show.svg"
 // import acko from "../../assets/acko.svg"
 import makers_asylum from "../../assets/makers_asylum.svg"
@@ -181,21 +180,25 @@ const MacbookPro = () => {
         }}>
           {/* First set */}
           <div className='flex flex-row items-center gap-x-10 md:gap-x-16 px-4 md:px-8'>
-            <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
-            <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={`set1-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
+                <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              </div>
+            ))}
           </div>
           {/* Duplicate for seamless loop */}
           <div className='flex flex-row items-center gap-x-10 md:gap-x-16 px-4 md:px-8'>
-            <img src={build} alt="build" className='brightness-30 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            {/* <img src={acko} alt="acko" className='transition-all duration-300 hover:brightness-0 cursor-pointer'/> */}
-            <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-            <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={`set2-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
+                <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+                <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              </div>
+            ))}
           </div>
         </div>
       </div>
