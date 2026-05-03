@@ -170,36 +170,28 @@ const MacbookPro = () => {
 
       </div>
 
-      <div className='w-full mt-8 md:mt-14 overflow-hidden'>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          width: 'max-content',
-          animation: 'marquee-scroll 20s linear infinite',
-        }}>
-          {/* First set */}
-          <div className='flex flex-row items-center gap-x-10 md:gap-x-16 px-4 md:px-8'>
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={`set1-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
-                <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-              </div>
-            ))}
-          </div>
-          {/* Duplicate for seamless loop */}
-          <div className='flex flex-row items-center gap-x-10 md:gap-x-16 px-4 md:px-8'>
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={`set2-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
-                <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-                <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
-              </div>
-            ))}
-          </div>
+      <div className='w-full mt-8 md:mt-14 overflow-hidden flex flex-row items-center'>
+        {/* First set */}
+        <div className='flex shrink-0 animate-marquee flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16'>
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div key={`set1-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
+              <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+            </div>
+          ))}
+        </div>
+        {/* Duplicate for seamless loop */}
+        <div className='flex shrink-0 animate-marquee flex-row items-center gap-x-10 md:gap-x-16 pr-10 md:pr-16' aria-hidden="true">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div key={`set2-${i}`} className="flex flex-row items-center gap-x-10 md:gap-x-16">
+              <img src={book_my_show} alt="book my show" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={makers_asylum} alt="makers asylum" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={your_erp} alt="your erp" className='transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+              <img src={ozu} alt="ozu" className='brightness-20 transition-all duration-300 hover:brightness-0 cursor-pointer h-6 md:h-auto' />
+            </div>
+          ))}
         </div>
       </div>
 
